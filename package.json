@@ -1,0 +1,17 @@
+{
+  "name": "es6-playground",
+  "version": "0.0.1",
+  "description": "playing wiht es6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caleb Eno",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "browserify": "^13.0.1"
+  }
+}
