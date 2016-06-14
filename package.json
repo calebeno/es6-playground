@@ -2,19 +2,25 @@
   "name": "es6-playground",
   "version": "0.0.1",
   "description": "playing wiht es6",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "prestart": "babel app.es6 -o app.js",
-    "start": "http-server -a localhost -p 8000"
+    "env": "evn",
+    "build-js": "browserify -t [babelify --presets [ es2015 react ] --sourceMaps=false] app/src/App.es6 > dist/app.js",
+    "build": "npm run build-js",
+    "prestart": "npm run build",
+    "start": "http-server ./dist -a localhost -p 8000"
   },
   "author": "Caleb Eno",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.9.0"
+    "react": "^15.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0"
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "http-server": "^0.9.0"
   }
 }
