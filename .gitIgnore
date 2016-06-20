@@ -1,5 +1,10 @@
 /dist
 
+/.vscode
+
+jsconfig.json
+typings
+
 # Logs
 logs
 *.log
